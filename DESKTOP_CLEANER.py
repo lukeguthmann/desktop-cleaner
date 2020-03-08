@@ -38,7 +38,7 @@ def desktop_images (desktop_directory_path):
 
     print('> > D E S K T O P   I M A G E S')
 
-    # list of files on the desktop.
+    # list of files on the desktop will be inserted into array.
     desktop_images_list = []
 
     # file extensions that will be moves and cycled through in for loop.
@@ -90,7 +90,7 @@ def creating_desktop_directory(desktop_directory_path):
             for directory in desktop_directory:
                 if os.path.isdir(directory):
                     print(f'_/ {directory}')
-            print() # seperator
+            print()
             print(f"Desktop F O L D E R [{choose_directory_name}] already exists."
                   f" Please choose another folder name . .")
     print("-" * 40)
@@ -126,7 +126,6 @@ def document_inside_of_new_folder ():
 
 
 if __name__ == '__main__':
-    '''see notes throughout for what these functions do.'''
     desktop_directory_path = desktop_path()
     desktop_images_list = desktop_images(desktop_directory_path)
     directory_on_desktop = creating_desktop_directory(desktop_directory_path)
